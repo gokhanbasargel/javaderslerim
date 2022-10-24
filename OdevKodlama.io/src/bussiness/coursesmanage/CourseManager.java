@@ -25,7 +25,7 @@ public class CourseManager implements ICourseService {
 
     @Override
     public void add(Course course) {
-        if(checkIfCourseNameExist(course)){
+        if(!checkIfCourseNameExist(course)){
             idbService.addCourse(course);
         }
 

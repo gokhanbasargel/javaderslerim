@@ -11,7 +11,7 @@ import java.util.List;
 
 public class HibernateDB implements IDBService{
 
-    private  ArrayList<Course> courses;
+    private  List<Course> courses;
     private List<Category> categories;
     private  List<Person> personList;
 
@@ -63,12 +63,12 @@ public class HibernateDB implements IDBService{
     @Override
     public List<Course> getAllCourses() {
 
-        return courses;
+        return new ArrayList<>(courses);
     }
 
     @Override
     public List<Category> getAllCategory() {
-        return categories;
+        return new ArrayList<>(categories);
     }
 
 
